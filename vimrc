@@ -1,9 +1,9 @@
 scriptencoding utf-8
 " ============================================================================
-" Author: TaoBeier
-" Blog: http://moelove.info
-" Version: v1.1.0
-" Update Time: 2016-09-25
+" Author: MoonChang Chae <Origin from TaoBeier>
+" Blog: <http://moelove.info>
+" Version: v1.1.1
+" Update Time: 2016-10-17
 
 " ============================================================================
 " Vundle initialization
@@ -165,7 +165,7 @@ set confirm
 " no backup files
 set nobackup
 " other settings 
-set langmenu=zh_CN.UTF-8
+set langmenu=ko_KR.UTF-8
 set mouse=a
 set whichwrap+=<,>,h,l,[,]
 set background=dark
@@ -221,6 +221,12 @@ imap <M-Right> <ESC><c-w>l
 imap <M-Left> <ESC><c-w>h
 imap <M-Up> <ESC><c-w>k
 imap <M-Down> <ESC><c-w>j
+
+"Better window navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " old autocomplete keyboard shortcut
 imap <C-J> <C-X><C-O>
@@ -500,13 +506,13 @@ endif
 " let g:airline_symbols.readonly = '⭤'
 " let g:airline_symbols.linenr = '⭡'
 
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+let g:airline_left_sep = '<'
+let g:airline_left_alt_sep = '<'
+let g:airline_right_sep = '>'
+let g:airline_right_alt_sep = '>'
+let g:airline_symbols.branch = '(b)'
+let g:airline_symbols.readonly = '(r)'
+let g:airline_symbols.linenr = '(n)'
 
 " new file set title and turn to endline
 autocmd BufNewFile *.sh,*.py,*.rb exec ":call SetTitle()"
